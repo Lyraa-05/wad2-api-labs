@@ -1,10 +1,10 @@
 //Load http module to create a http server
 import http from 'http';
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
 
-dotenv.config()
+dotenv.config();
 
-const port = process.env.PORT
+const port = process.env.PORT;
 //configure http server to respond with hello world to all requests
 const server = http.createServer((req,res) => {
     res.writeHead(200);
