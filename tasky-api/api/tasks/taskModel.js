@@ -9,7 +9,11 @@ const TaskSchema = new Schema({
   done: Boolean,
   priority: {type: String, enum: ["Low","Medium","High"], required: true},
   created_at: {type: Date, default: Date.now},
-  updated_at: {type: Date, default: Date.now}
+  updated_at: {type: Date, default: Date.now},
+  userId: {
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+},
 });
 
 const dateValidator = (date) => {
