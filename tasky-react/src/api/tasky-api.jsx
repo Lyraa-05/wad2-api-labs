@@ -12,7 +12,7 @@ export const getTasks = async () => {
 
 export const addTask = async(data) => {
     const res = await fetch(
-        `http://localhost:8080/api/tasks`,
+        `http://localhost:8080/api/tasks/`,
         {
             method: 'POST',
             headers: {
